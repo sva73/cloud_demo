@@ -1,8 +1,19 @@
 from kubernetes import client, config
+from kubernetes.config.config_exception import ConfigException
+import os
 import uuid
 
 # Kubernetes Konfiguration laden
-config.load_incluster_config()
+def load_k8s():
+    try:
+        config.load_incluster_config()
+        print("Loaded in-cluster config")
+    except ConfigException:
+        kubeconfig = os.getenv("KUBECONFIG", "~/.kube/config")
+        config.load_kube_config(config_file=kubeconfig)
+        print("Loaded kubeconfig")
+
+load_k8s()
 
 def create_worker_pod():
 
