@@ -28,6 +28,6 @@ jobs:
 
       - name: Build Frontend
         run: |
-          cd frontend
+          cd frontend/cloud_demo
           npm run build
           
