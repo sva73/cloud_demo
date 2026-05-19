@@ -1,5 +1,6 @@
 from kubernetes import client, config
 from kubernetes.config.config_exception import ConfigException
+import os
 import uuid
 
 
@@ -10,7 +11,8 @@ def load_k8s():
 
     except ConfigException:
         try:
-            config.load_kube_config()
+            kubeconfig = os.getenv("KUBECONFIG", "~/.kube/config")
+            config.load_kube_config(config_file=kubeconfig)
             print("Loaded kubeconfig")
 
         except ConfigException:
@@ -18,7 +20,6 @@ def load_k8s():
 
 
 def create_worker_job():
-
     # Kubernetes erst hier laden
     load_k8s()
 

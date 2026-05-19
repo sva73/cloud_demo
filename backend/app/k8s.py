@@ -8,12 +8,18 @@ def load_k8s():
     try:
         config.load_incluster_config()
         print("Loaded in-cluster config")
+
     except ConfigException:
-        kubeconfig = os.getenv("KUBECONFIG", "~/.kube/config")
-        config.load_kube_config(config_file=kubeconfig)
-        print("Loaded kubeconfig")
+        try:
+            kubeconfig = os.getenv("KUBECONFIG", "~/.kube/config")
+            config.load_kube_config(config_file=kubeconfig)
+            print("Loaded kubeconfig")
+
+        except ConfigException:
+            print("No Kubernetes config available")
 
 def create_worker_pod():
+    # Kubernetes erst hier laden
     load_k8s()
 
     pod_name = f"worker-{uuid.uuid4().hex[:6]}"
