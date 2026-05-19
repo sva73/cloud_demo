@@ -1,9 +1,26 @@
 from kubernetes import client, config
+from kubernetes.config.config_exception import ConfigException
 import uuid
 
-config.load_incluster_config()
+
+def load_k8s():
+    try:
+        config.load_incluster_config()
+        print("Loaded in-cluster config")
+
+    except ConfigException:
+        try:
+            config.load_kube_config()
+            print("Loaded kubeconfig")
+
+        except ConfigException:
+            print("No Kubernetes config available")
+
 
 def create_worker_job():
+
+    # Kubernetes erst hier laden
+    load_k8s()
 
     job_name = f"worker-job-{uuid.uuid4().hex[:6]}"
 
