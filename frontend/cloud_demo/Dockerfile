@@ -14,7 +14,7 @@ RUN npm run build
 # Runtime Stage
 FROM nginx:stable-alpine
 
-COPY --from=build /could_demo/dist /usr/share/nginx/html
+COPY --from=build /cloud_demo/dist /usr/share/nginx/html
 
 EXPOSE 80
 
