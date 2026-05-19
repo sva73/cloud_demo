@@ -13,9 +13,8 @@ def load_k8s():
         config.load_kube_config(config_file=kubeconfig)
         print("Loaded kubeconfig")
 
-load_k8s()
-
 def create_worker_pod():
+    load_k8s()
 
     pod_name = f"worker-{uuid.uuid4().hex[:6]}"
 
