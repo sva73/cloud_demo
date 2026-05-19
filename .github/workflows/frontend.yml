@@ -23,7 +23,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd frontend
+          cd frontend/cloud_demo
           npm install
 
       - name: Build Frontend
