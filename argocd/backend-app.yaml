@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/sva73/cloud-platform.git
+    repoURL: https://github.com/sva73/cloud_demo.git
     targetRevision: master
     path: helm/backend
 
