@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/sva73/cloud-platform.git
-    targetRevision: main
+    targetRevision: master
     path: helm/backend
 
   destination:
