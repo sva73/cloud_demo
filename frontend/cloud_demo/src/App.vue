@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
 const items = ref<string[]>([])
-const status = ref('Lade Daten ...')
+const status = ref('Lade Daten...')
 
 const apiUrl = import.meta.env.VITE_API_URL
 

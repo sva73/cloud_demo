@@ -18,7 +18,7 @@ app.add_middleware(
 @app.get("/")
 def root():
     return {
-        "message": "FastAPI Backend läuft"
+        "message": "FastAPI Backend läuft "
     }
 
 @app.get("/api/health")
