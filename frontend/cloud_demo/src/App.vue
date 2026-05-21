@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import axios from 'axios'
 
@@ -39,4 +39,12 @@ onMounted(async () => {
   padding: 40px;
   font-family: Arial, sans-serif;
 }
-</style>
+</style> -->
+
+<template>
+  <AppLayout />
+</template>
+
+<script setup lang="ts">
+import AppLayout from './components/layout/AppLayout.vue'
+</script>

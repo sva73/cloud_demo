@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 10%;
+  min-width: 220px;
+  background: #1e293b;
+  color: white;
+  padding: 1rem;
+}
+
+.content {
+  width: 90%;
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content {
+    width: 100%;
+  }
+}
