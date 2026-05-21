@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: vue-frontend
-        image: vue-frontend:2.0
+        image: vue-frontend:3.0
         imagePullPolicy: Never
         ports:
         - containerPort: 80
