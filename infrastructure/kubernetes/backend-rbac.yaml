@@ -11,9 +11,13 @@ metadata:
   namespace: workers
   name: pod-manager-role
 rules:
-- apiGroups: ["", "batch"]
-  resources: ["pods", "jobs"]
-  verbs: ["create", "get", "list", "delete"]
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["create", "get", "list", "delete"]
+
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["create", "get", "list", "delete"]
 
 ---
 apiVersion: rbac.authorization.k8s.io/v1
