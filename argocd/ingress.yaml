@@ -8,7 +8,7 @@ spec:
   ingressClassName: traefik
 
   rules:
-    - host: argocd.local
+    - host: argocd.test
       http:
         paths:
           - path: /
