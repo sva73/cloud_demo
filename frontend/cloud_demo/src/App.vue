@@ -43,6 +43,7 @@ onMounted(async () => {
 
 <template>
   <AppLayout />
+  Das ist ein Test
 </template>
 
 <script setup lang="ts">
