@@ -2,7 +2,7 @@
   <div class="topbar">
 
     <div class="left">
-      <h1 class="title">PrimeVue Dashboard</h1>
+      <h1 class="title">PrimeVue Dashboard SVA</h1>
     </div>
 
     <div class="right">
