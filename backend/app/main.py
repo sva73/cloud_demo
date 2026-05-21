@@ -57,3 +57,13 @@ def start_job():
         "status": "job started",
         "job": job_name
     }
+
+@app.post("/api/start-test")
+def start_job():
+
+    job_name = "create_worker_job()"
+
+    return {
+        "status": "job started",
+        "job": job_name
+    }
