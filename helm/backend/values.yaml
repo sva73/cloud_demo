@@ -67,7 +67,7 @@ ingress:
   hosts:
     - host: api.test
       paths:
-        - path: /docs
+        - path: /
           pathType: Prefix
   tls: []
   #  - secretName: chart-example-tls
